@@ -1,0 +1,96 @@
+/*This is what is surrounding my header box*/
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Courier;
+  padding: 10px;
+  background: #f1f1f1;
+  width: 1000px;
+  height: 1000px;
+}
+/*This is the style for the page which includes the font,size of padding which is the border around your writing, and background color to display the entire page the same*/
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: lightpink;
+}
+.header h1 {
+  font-size: 50px;
+}
+/*This is what the header consists of: the size of the padding which is the border around the writing,the font size of the words in the header, where the text is on the header, and the background color of the header inside the border box*/
+
+/* This styles the top navigation bar with a background color*/
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* This style has the styles of the links which makes it stay in its place on the website with the use of the float and the display is to show the shape of the box holding the links, the color number, where the links are placed within the display box, and padding size which is the pixels around the writing. */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+
+/*This is to make the section for my about me and helpful websites section go in its place and adds a background color*/
+}
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: gray;
+  width: 800px;
+  height: 600px;
+}
+
+/* I created two unequal columns that floats next to each other by using the float tag and tell it where to go and used the width provided */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+  clear: right;
+}
+/* I created two unequal columns that floats next to each other by using the float tag and tell it where to go and used the width provided */
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* I added a card effect to distinguish each of my blogs and added the background color to make the layout look clean */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  width: 850px;
+
+/* This is for the ]eft and right column */
+.column.side {
+  width: 100%;
+}
+
+/* I added clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other and this is so when you are looking at the website from a smaller orientation or a different one then the floating sections will be moved to fit the screen and be in the same card */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other and this is so when you are looking at the website from a smaller orientation or a different one then the floating sections will be moved to fit the screen and be in the same card*/
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
